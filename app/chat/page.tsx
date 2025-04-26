@@ -74,9 +74,10 @@ export default function ChatPage() {
               <div className="space-y-2">
                 <h3 className="font-semibold">About This Chat</h3>
                 <p className="text-sm text-muted-foreground">
-                  This support chat provides assistance with using the analytics dashboard.
-                  It will proactively reach out if you're inactive for a period of time.
-                  Your chat history is saved locally for your convenience.
+                  This support chat provides assistance with using the analytics
+                  dashboard. It will proactively reach out if you&apos;re
+                  inactive for a period of time. Your chat history is saved
+                  locally for your convenience.
                 </p>
               </div>
             </div>

@@ -17,32 +17,35 @@ export default function AnalyticsPage() {
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-bold tracking-tight">Analytics</h2>
           </div>
-          
+
           <Tabs defaultValue="overview" className="space-y-4">
             <TabsList>
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="realtime">Realtime</TabsTrigger>
               <TabsTrigger value="reports">Reports</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="overview" className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <Card className="col-span-1 md:col-span-2 lg:col-span-3">
                   <CardHeader>
                     <CardTitle>Analytics Overview</CardTitle>
                     <CardDescription>
-                      View a comprehensive overview of your website's performance metrics
+                      View a comprehensive overview of your website&apos;s
+                      performance metrics
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      This dashboard provides real-time analytics about your website traffic and user activity. 
-                      The data is continuously updated using WebSockets to give you the most current information.
+                      This dashboard provides real-time analytics about your
+                      website traffic and user activity. The data is
+                      continuously updated using WebSockets to give you the most
+                      current information.
                     </p>
                   </CardContent>
                 </Card>
               </div>
-              
+
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <Card className="col-span-1 md:col-span-2">
                   <CardHeader>
@@ -55,7 +58,7 @@ export default function AnalyticsPage() {
                     <ActiveUsersChart activeUsers={activeUsers} />
                   </CardContent>
                 </Card>
-                
+
                 <Card className="col-span-1">
                   <CardHeader>
                     <CardTitle>Activity Breakdown</CardTitle>
@@ -68,14 +71,16 @@ export default function AnalyticsPage() {
                       <ActivityMetricsChart metrics={metrics} />
                     ) : (
                       <div className="flex h-[200px] items-center justify-center">
-                        <p className="text-sm text-muted-foreground">Loading metrics...</p>
+                        <p className="text-sm text-muted-foreground">
+                          Loading metrics...
+                        </p>
                       </div>
                     )}
                   </CardContent>
                 </Card>
               </div>
             </TabsContent>
-            
+
             <TabsContent value="realtime" className="space-y-4">
               <Card>
                 <CardHeader>
@@ -87,13 +92,14 @@ export default function AnalyticsPage() {
                 <CardContent>
                   <div className="flex flex-col items-center justify-center space-y-4 py-8">
                     <p className="text-center text-muted-foreground">
-                      Realtime detailed analytics will be available in the next update.
+                      Realtime detailed analytics will be available in the next
+                      update.
                     </p>
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="reports" className="space-y-4">
               <Card>
                 <CardHeader>
@@ -105,7 +111,8 @@ export default function AnalyticsPage() {
                 <CardContent>
                   <div className="flex flex-col items-center justify-center space-y-4 py-8">
                     <p className="text-center text-muted-foreground">
-                      Report generation and export functionality will be available in the next update.
+                      Report generation and export functionality will be
+                      available in the next update.
                     </p>
                   </div>
                 </CardContent>
