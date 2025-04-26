@@ -11,24 +11,24 @@ import { DashboardLayout } from "@/components/dashboard-layout";
 import { DashboardStats } from "@/types";
 
 export default function DashboardPage() {
-  const { status, activeUsers, activityFeed, metrics, reconnect } = useWebSocket();
+  const { status, activeUsers, activityFeed, metrics } = useWebSocket(); // NO reconnect
   const [stats, setStats] = useState<DashboardStats>({
     activeUsers: 0,
     totalPageViews: 0,
     averageSessionTime: "0m 0s",
     bounceRate: "0%",
   });
-  
-  // Update stats when activeUsers changes
+
   useEffect(() => {
     setStats({
       activeUsers,
-      totalPageViews: Math.floor(activeUsers * (Math.random() * 5 + 2)), // Simulated value
-      averageSessionTime: `${Math.floor(Math.random() * 10 + 1)}m ${Math.floor(Math.random() * 50 + 10)}s`, // Simulated value
-      bounceRate: `${Math.floor(Math.random() * 40 + 10)}%`, // Simulated value
+      totalPageViews: Math.floor(activeUsers * (Math.random() * 5 + 2)),
+      averageSessionTime: `${Math.floor(Math.random() * 10 + 1)}m ${Math.floor(
+        Math.random() * 50 + 10
+      )}s`,
+      bounceRate: `${Math.floor(Math.random() * 40 + 10)}%`,
     });
   }, [activeUsers]);
-  
   return (
     <DashboardLayout status={status}>
       <div className="flex flex-col">
