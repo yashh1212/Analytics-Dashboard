@@ -2,7 +2,6 @@
 
 A real-time analytics dashboard built with Next.js, WebSocket, and Tailwind CSS. Monitor your website's performance with live data and instant insights.
 
-![Analytics Dashboard](https://images.pexels.com/photos/7947772/pexels-photo-7947772.jpeg)
 
 ## Features
 
